@@ -6,7 +6,7 @@
 </div>
 
 <div class="row p-4">
-    <div class="card m-auto" style="width:90%">
+    <div class="card mb-4 m-auto" style="width:90%">
         <div class="card-body">
             <div id="chart1">
             </div>
@@ -15,9 +15,18 @@
                 Vero, natus sapiente.</p>
         </div>
     </div>
-    <div class="card m-auto" style="width:90%">
+    <div class="card mb-4 m-auto" style="width:90%">
         <div class="card-body">
             <div id="chart2">
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda necessitatibus vel, ad fuga cumque
+                quam temporibus perspiciatis nihil porro sint similique qui, magni error eius consequatur inventore!
+                Vero, natus sapiente.</p>
+        </div>
+    </div>
+    <div class="card mb-4 m-auto" style="width:90%">
+        <div class="card-body">
+            <div id="chart3">
             </div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda necessitatibus vel, ad fuga cumque
                 quam temporibus perspiciatis nihil porro sint similique qui, magni error eius consequatur inventore!
@@ -32,9 +41,11 @@
     integrity="sha512-V0j9LhrK9IMNdFYZqh+IqU4cjo7wdxyHNyH+L0td4HryBuZ7Oq6QxP2/CWr6TituX31+gv5PnolvERuTbz8UNA=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
 <script>
-    var graph1 = {{ graph1JSON | safe}};
+    const graph1 = {{ graph1JSON | safe}};
     Plotly.newPlot("chart1", graph1, {});
-    var graph2 = {{ graph2JSON | safe}};
+    const graph2 = {{ graph2JSON | safe}};
     Plotly.newPlot("chart2", graph2, {});
+    const graph3 = {{ graph3JSON | safe}};
+    Plotly.newPlot("chart3", graph3, {});
 </script>
 {% endblock %}
