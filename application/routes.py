@@ -6,5 +6,5 @@ import plotly
 import plotly.express as px
 
 @app.route('/')
-def index():
-    return render_template("layout.html")
+def index() :
+    return render_template("layout.html", title="Home")
